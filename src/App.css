@@ -3,11 +3,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
   height: 150px;
@@ -19,13 +14,14 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
+a:hover, a:active, a:visited, a:focus {
+    text-decoration: none;
+}
 .topnavbar {
     height: 86px !important;
     overflow: hidden;
     background-color: #ffffff;
     border-bottom: 1px solid rgba(0,0,0,.0975);
-
 }
 .header-container a:hover{
     font-color: red;
@@ -72,7 +68,7 @@
     vertical-align:middle;
     float:left;
     width: 140px;
-    margin-right: 0px !important;
+    margin: 20px 0 20px 0;
 }
 .header-nav-right a {
     float: right;
@@ -102,8 +98,7 @@
 .carousel-item {
     width: 100%;
     height: 100%;
-    background: url('sophie-sollmann-94019.jpg') no-repeat center;
-    background-size: cover;
+
 }
 .img-shadow {
     position: relative;
@@ -131,41 +126,82 @@
     width: 100%;
     margin: 0;
     overflow:hidden;
+    height: 100%;
 }
 .tile-img {
     overflow:hidden;
     margin-bottom: 15px;
 }
 .home-secondary {
-    overflow:hidden;
     padding: 0 15px 0 15px;
 }
 
 .home-wide-product {
     margin: 30px 0 30px 0;
-    height: 600px;
-    max-height:650px;
     padding: 0 30px 0 30px;
+    height: 100%;
+    width: 100%;
+}
+.wide-background-img-div {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: inline-block;
 }
 .wide-product-section {
-    padding: 25px 0 25px 0;
+    padding: 30px 0 30px 0;
 }
 .tile-title {
-    margin: 23px 0 9px 0;
+    font-size: 18px;
+    margin: 15px 0 9px 0;
 }
 .ta {
     color: black;
-    font-size: 12px;
+    font-size: 11px;
     display: inline-block;
     text-decoration: underline;
 }
 .wide-img-div {
     height: 100%;
     margin-bottom: 30px;
+
 }
-
-
-
+.overlay {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.ver-center-wrapper {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.overlay-content {
+    padding-left: 15px;
+}
+.overlay-title {
+    font-size: 35px;
+    color: white;
+    font-weight: 600;
+}
+.rectangle-button-wrapper {
+    margin-top: 27px;
+    display: block;
+}
+.rectangle-button-wrapper a {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    text-align:center;
+    transition: all 0.3s ease 0s;
+    padding: 10px 50px;
+    font-weight: 500;
+}
 
 
 
@@ -175,14 +211,14 @@
     }
     .home-secondary {
         margin-top: 20px;
-        height:500px;
-        max-height: 650px;
+        max-height: 700px;
     }
     .home-wide-product {
         padding: 0 30px 0 30px;
     }
-
-
+    .rectangle-button-wrapper {
+        float: left;
+    }
 }
 @media only screen and (min-width: 768px) {
 
@@ -192,9 +228,6 @@
         margin: 0 0 0 0;
     }
 
-    .home-wide-product {
-        padding: 0;
-    }
     .home-secondary {
         height: 100%;
         max-height: 1200px;
@@ -203,5 +236,18 @@
     .tile {
         margin-bottom: 20px;
     }
+    .wide-product-section {
+        padding: 0;
+    }
+    .home-wide-product {
+        padding: 0;
+    }
+    .home-pitch {
+        padding: 15px 0 15px 0;
+    }
+    .rectangle-button-wrapper {
+        float: none;
+    }
+
 }
 

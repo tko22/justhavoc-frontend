@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import sophie from './sophie-sollmann-94019.jpg'
 import suit from './dane-deaner-334260.jpg'
-import other from './tobias-van-schneider-310434.jpg'
 import hang from './igor-ovsyannykov-174012.jpg'
 import pete from './pete-bellis-256701.jpg'
 import brook from './brooke-cagle-65599.jpg'
@@ -10,13 +8,23 @@ import './App.css';
 import { Button, Row } from 'react-bootstrap'
 import Header from "./components/header";
 import classnames from 'classnames';
-
+import { Route, Link } from 'react-router-dom'
+import Clothing from "./components/clothing"
+import Others from "./components/others"
+import AboutUs from "./components/about-us"
+import Footer from "./components/footer"
 class App extends Component {
   render() {
     return (
       <section className="App">
           <Header/>
-          <Main />
+          <main>
+              <Route exact path="/" component={Main} />
+              <Route exact path="/clothing" component={Clothing} />
+              <Route exact path="/others" component={Others} />
+              <Route exact path="/about-us" component={AboutUs} />
+          </main>
+          <Footer/>
       </section>
     );
   }
@@ -130,15 +138,28 @@ class FrontPageSecondary extends Component {
 }
 class FrontPageWideProduct extends Component {
     render() {
-        const contentImg = classnames({'wide-img-div':'true','img-shadow':'true'})
+        const overlayCol = classnames({'col-md-6':'true','col-xs-10':'true','ver-center-wrapper':'true'})
         return (
             <section className="wide-product-section">
                 <div className="container-fluid">
                     <div className="row">
                         <div className='home-wide-product'>
-                            <div className={contentImg}>
-                                <img className="max-width-img" src={hang} />
+                            <div className="wide-background-img-div">
+                                <img className="max-width-img"src={hang} />
+                                <div className="overlay">
+                                    <div className="row" style={{height: '100%'}}>
+                                        <div style={{height: '100%'}} className={overlayCol}>
+                                            <div className="overlay-content">
+                                                <p className="overlay-title">DRESSED FOR ANYTHING</p>
+                                                <div className="rectangle-button-wrapper">
+                                                    <div><a href="#">SHOP</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
