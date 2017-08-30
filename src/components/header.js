@@ -19,8 +19,8 @@ class Header extends Component{
 
                     </div>
                     <div className="header-nav-right">
-                        <span className="header-icon-span"><a href="#"><img src={profile_icon} alt="profile icon" width="20" height="20"/></a></span>
-                        <span className="header-icon-span"><a href="#"><img src={search_icon} alt="search icon" width="20" height="20"/></a></span>
+                        <span className="header-icon-span"><Link to="/profile"><img src={profile_icon} alt="profile icon" width="20" height="20"/></Link></span>
+                        <span className="header-icon-span"><Link to="/search"><img src={search_icon} alt="search icon" width="20" height="20"/></Link></span>
                     </div>
                 </div>
             </nav>

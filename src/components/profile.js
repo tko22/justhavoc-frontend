@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
-class Others extends Component {
+
+
+class Profile extends Component {
     render() {
         return(
-            <h1>Others</h1>
+            <p>Profile</p>
         );
     }
 }
 
 
-export default Others;
+export default Profile;

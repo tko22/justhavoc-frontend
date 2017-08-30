@@ -14,7 +14,8 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-a:hover, a:active, a:visited, a:focus {
+
+a, a:hover, a:active, a:visited, a:focus {
     text-decoration: none;
 }
 .topnavbar {
@@ -202,7 +203,9 @@ a:hover, a:active, a:visited, a:focus {
     padding: 10px 50px;
     font-weight: 500;
 }
-
+.footer-wrapper {
+    padding:30px 5% 71px;
+}
 
 
 

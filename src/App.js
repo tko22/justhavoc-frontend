@@ -9,10 +9,13 @@ import { Button, Row } from 'react-bootstrap'
 import Header from "./components/header";
 import classnames from 'classnames';
 import { Route, Link } from 'react-router-dom'
-import Clothing from "./components/clothing"
-import Others from "./components/others"
+import ProductList from "./components/product_list"
 import AboutUs from "./components/about-us"
 import Footer from "./components/footer"
+import Profile from "./components/profile"
+import Search from "./components/search"
+
+
 class App extends Component {
   render() {
     return (
@@ -20,9 +23,11 @@ class App extends Component {
           <Header/>
           <main>
               <Route exact path="/" component={Main} />
-              <Route exact path="/clothing" component={Clothing} />
-              <Route exact path="/others" component={Others} />
+              <Route exact path="/clothing" component={ProductList} />
+              <Route exact path="/others" component={ProductList} />
               <Route exact path="/about-us" component={AboutUs} />
+              <Route exact path="/profile" component={Profile} />
+              <Route exact path="/search" component={Search} />
           </main>
           <Footer/>
       </section>

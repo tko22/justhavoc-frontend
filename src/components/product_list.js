@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Clothing extends Component {
+class ProductList extends Component {
     render() {
         return(
             <h1>hi</h1>
@@ -9,4 +9,4 @@ class Clothing extends Component {
 }
 
 
-export default Clothing;
+export default ProductList;
