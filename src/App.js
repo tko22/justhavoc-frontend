@@ -9,8 +9,9 @@ import { Button, Row } from 'react-bootstrap'
 import Header from "./components/header";
 import classnames from 'classnames';
 import { Route, Link } from 'react-router-dom'
-import ProductList from "./components/product_list"
-import AboutUs from "./components/about-us"
+import ProductPage from "./components/product_page"
+import Other from "./components/other_product_page"
+import AboutUs from "./components/about_us"
 import Footer from "./components/footer"
 import Profile from "./components/profile"
 import Search from "./components/search"
@@ -23,8 +24,8 @@ class App extends Component {
           <Header/>
           <main>
               <Route exact path="/" component={Main} />
-              <Route exact path="/clothing" component={ProductList} />
-              <Route exact path="/others" component={ProductList} />
+              <Route exact path="/clothing" component={ProductPage} />
+              <Route exact path="/others" component={Other} />
               <Route exact path="/about-us" component={AboutUs} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/search" component={Search} />
@@ -40,9 +41,7 @@ class Main extends Component {
     render() {
         return (
           <div className="main-content">
-              <div className="container">
-                  <FrontPageIntro />
-              </div>
+              <FrontPageIntro />
               <FrontPagePitch />
               <FrontPageSecondary />
               <FrontPageWideProduct />
@@ -55,15 +54,19 @@ class FrontPageIntroMain extends Component {
         super(props);
     }
     render () {
-        const carouselClass = classnames({'carousel':'true','img-shadow':'true'})
+        const carouselClass = classnames({'carousel':'true','img-shadow':'true'});
         return (
-            <div className="mainCarousel">
-                <div className={carouselClass}>
-                    <div className="carousel-item">
-                        <img className="max-width-img" src={sophie} />
+            <section className="main-intro-section">
+                <div className="container">
+                    <div className="mainCarousel">
+                        <div className={carouselClass}>
+                            <div className="carousel-item">
+                                <img className="max-width-img" src={sophie} />
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         );
     }
 }
@@ -83,7 +86,7 @@ class FrontPagePitch extends Component {
     render() {
         return (
             <section className="info-section">
-                <div className="container-fluid">
+                <div className="container">
                     <div className="row">
                         <div className="home-pitch">
                             <p className="intro-content">Find unique and authentic products</p>
@@ -97,11 +100,11 @@ class FrontPagePitch extends Component {
 }
 class FrontPageSecondary extends Component {
     render() {
-        const tileImgClass = classnames({'tile-img':'true'})
+        const tileImgClass = classnames({'tile-img':'true'});
 
         return (
             <section className="secondary-products-section">
-                <div className="container-fluid">
+                <div className="container">
                     <div className="home-secondary">
                         <div className="row">
                             <div className="col-sm-6">
@@ -143,10 +146,10 @@ class FrontPageSecondary extends Component {
 }
 class FrontPageWideProduct extends Component {
     render() {
-        const overlayCol = classnames({'col-md-6':'true','col-xs-10':'true','ver-center-wrapper':'true'})
+        const overlayCol = classnames({'col-md-6':'true','col-xs-10':'true','ver-center-wrapper':'true'});
         return (
             <section className="wide-product-section">
-                <div className="container-fluid">
+                <div className="container">
                     <div className="row">
                         <div className='home-wide-product'>
                             <div className="wide-background-img-div">

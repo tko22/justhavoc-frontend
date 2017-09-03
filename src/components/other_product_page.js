@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class OtherProductList extends Component {
+class OtherProductPage extends Component {
     render() {
         return(
             <h1>other product list</h1>
@@ -9,4 +9,4 @@ class OtherProductList extends Component {
 }
 
 
-export default OtherProductList;
+export default OtherProductPage;
