@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 class Sorter extends Component {
     render() {
-        const OneSorter = classnames({'col-md-1':'true','col-sm-5':'true'})
+        const OneSorter = classnames({'col-md-1':'true','col-xs-5':'true'})
         return(
             <section className="sorter-section">
                 <div className="sorter-wrapper">

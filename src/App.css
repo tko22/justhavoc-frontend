@@ -15,6 +15,7 @@
 }
 
 a, a:hover, a:visited, a:link, a:active {
+    color: black;
     text-decoration: none;
     border: none;
 }
@@ -187,7 +188,7 @@ a, a:hover, a:visited, a:link, a:active {
 .overlay-title {
     font-size: 35px;
     color: white;
-    font-weight: 600;
+    font-weight: 400;
 }
 .rectangle-button-wrapper {
     margin-top: 27px;
@@ -211,8 +212,7 @@ a, a:hover, a:visited, a:link, a:active {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
-
+    height: 250px;
 }
 .vert-align {
     position: relative;
@@ -224,6 +224,7 @@ a, a:hover, a:visited, a:link, a:active {
     color: white;
     font-weight: 500;
 }
+
 .sorter-wrapper {
     height: 40px;
     border-bottom: 1px solid #f6f6f6;
@@ -234,11 +235,75 @@ a, a:hover, a:visited, a:link, a:active {
     font-weight: 200;
     letter-spacing: 1.5px;
 }
+a {
+    text-decoration: none !important;
+    color:black !important;
+}
+.product-box {
+    margin-bottom:10px;
+    padding-bottom: 20px;
+
+}
+.product-list-wrapper {
+    max-width: 600px;
+    overflow:hidden;
+    margin: 30px auto;
+    padding: 0;
+}
+
+.product-list-wrapper p, .product-list-wrapper h4 {
+    color: #000000;
+}
+.product-box .thumbnail{
+    overflow: hidden;
+}
+
+.caption {
+    padding-top:20px;
+    font-size:12px;
+}
+.product-box-brand-logo {
+    height:40px;
+    vertical-align:middle;
+    float:left;
+    width: 60px;
+    margin: 10px 0 10px 5px;
+}
+.product-name {
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+.product-box-brand-wrapper {
+    float: left;
+    height:100%;
+    padding: 20px 0 20px 10px;
+}
+.message-wrapper {
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin: 100px 0;
+}
+.brand-box {
+    width:400px;
+    padding-bottom: 20px;
+}
+.fixed-height-img-wrapper {
+    max-height:300px;
+    overflow:hidden;
+    width: 100%;
+}
+.top-offset {
+    margin-top: 0;
+}
 
 
+
+@media only screen and (min-width: 1250px) {
+
+}
 @media only screen and (min-width: 1024px) {
-    .main-content {
-    }
     .home-secondary {
         margin-top: 20px;
         max-height: 700px;
@@ -252,9 +317,26 @@ a, a:hover, a:visited, a:link, a:active {
     .full-background-image {
         height: 350px;
     }
+    .product-list-wrapper {
+        padding: 0 10px;
+    }
+
+
 }
 @media only screen and (min-width: 768px) {
-
+    .full-background-image {
+        height: 350px;
+    }
+    .top-offset {
+        margin-top: 15px;
+    }
+}
+@media only screen and (min-width: 650px) {
+    .product-box {
+        border: 1px solid #e6e6e6;
+        border-radius: 3px;
+        margin-bottom:60px;
+    }
 }
 @media only screen and (max-width: 768px) {
     .front-page-intro {
@@ -281,9 +363,17 @@ a, a:hover, a:visited, a:link, a:active {
     .rectangle-button-wrapper {
         float: none;
     }
-    .full-background-image {
-        height: 250px;
+    .product-list-wrapper {
+        margin: 5px auto;
     }
+    .brand-box {
+        padding-right: 0 !important;
+        padding-left: 0!important;
+    }
+    .fixed-height-img-wrapper {
+        max-height:400px;
+    }
+
 
 }
 

@@ -13,9 +13,10 @@ class Header extends Component{
                     </div>
                     <div className="header-nav-left">
 
-                        <span className="header-text-span"><Link style={{ textDecoration: 'none' }} to="/clothing">CLOTHING</Link></span>
-                        <span className="header-text-span"><Link style={{ textDecoration: 'none' }} to="/others">OTHERS</Link></span>
-                        <span className="header-text-span"><Link style={{ textDecoration: 'none' }} to="/about-us">ABOUT US</Link></span>
+                        <span className="header-text-span"><Link to="/clothing">CLOTHING</Link></span>
+                        <span className="header-text-span"><Link to="/others">OTHERS</Link></span>
+                        <span className="header-text-span"><Link to="/brands">BRANDS</Link></span>
+                        <span className="header-text-span"><Link to="/about-us">ABOUT US</Link></span>
 
                     </div>
                     <div className="header-nav-right">

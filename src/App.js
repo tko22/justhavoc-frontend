@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import sophie from './sophie-sollmann-94019.jpg'
-import suit from './dane-deaner-334260.jpg'
 import hang from './igor-ovsyannykov-174012.jpg'
 import pete from './pete-bellis-256701.jpg'
 import brook from './brooke-cagle-65599.jpg'
@@ -9,14 +8,15 @@ import { Button, Row } from 'react-bootstrap'
 import Header from "./components/header";
 import classnames from 'classnames';
 import { Route, Link } from 'react-router-dom'
-import ProductPage from "./components/product_page"
+import ProductList from "./components/product_list_page"
 import Other from "./components/other_product_page"
 import AboutUs from "./components/about_us"
 import Footer from "./components/footer"
 import Profile from "./components/profile"
 import Search from "./components/search"
-
-
+import ErrorPage from "./components/error_page"
+import BrandPage from "./components/Brands/brand_page"
+import BrandList from "./components/Brands/brand_list_page"
 class App extends Component {
   render() {
     return (
@@ -24,11 +24,17 @@ class App extends Component {
           <Header/>
           <main>
               <Route exact path="/" component={Main} />
-              <Route exact path="/clothing" component={ProductPage} />
+              <Route exact path="/clothing" component={ProductList} />
               <Route exact path="/others" component={Other} />
               <Route exact path="/about-us" component={AboutUs} />
-              <Route exact path="/profile" component={Profile} />
-              <Route exact path="/search" component={Search} />
+              <Route exact path="/profile" render={(props) => (
+                  <ErrorPage msg="Coming Soon!" />
+              )}/>
+              <Route exact path="/search" render={(props) => (
+                  <ErrorPage msg="Coming Soon!" />
+              )}/>
+              <Route exact path="/brands" component={BrandList}/>
+              <Route exact path="/brands/:brand" component={BrandPage} />
           </main>
           <Footer/>
       </section>
