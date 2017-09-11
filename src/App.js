@@ -24,8 +24,8 @@ class App extends Component {
           <Header/>
           <main>
               <Route exact path="/" component={Main} />
-              <Route exact path="/clothing" component={ProductList} />
-              <Route exact path="/others" component={Other} />
+              <Route exact path="/products" component={ProductList} />
+              {/*<Route exact path="/others" component={Other} />*/}
               <Route exact path="/about-us" component={AboutUs} />
               <Route exact path="/profile" render={(props) => (
                   <ErrorPage msg="Coming Soon!" />

@@ -8,13 +8,15 @@ class ProductBox extends Component {
         super(props);
         this.state = {
             productName: props.prodName,
+            productSlug: props.slug,
             // productDescription: props.description,
             productBrand: props.brand,
+            productBrandSlug: props.brandSlug,
             productImg: props.img,
             // productBrandLogo: props.logo,
             // productPrice: props.price,
         };
-        this.BrandLink = "/brands/" + this.state.productBrand
+        this.BrandLink = "/brands/" + this.state.productBrandSlug
     }
     render() {
         const productBoxClass = classnames({'product-box':'true'});

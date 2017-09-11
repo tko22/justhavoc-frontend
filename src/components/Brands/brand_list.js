@@ -8,10 +8,10 @@ class BrandList extends Component {
             <section className="brand-list-section">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="top-offset">
-                            <BrandBox/>
-                            <BrandBox/>
-                            <BrandBox/>
+                        <div className="side-top-offset">
+                            <BrandBox name="brand 1" slug="brand-1"/>
+                            <BrandBox name="brand 2" slug="brand-2"/>
+                            <BrandBox name="brand 5" slug="brand-5"/>
                         </div>
                     </div>
                 </div>

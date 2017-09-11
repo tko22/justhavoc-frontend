@@ -294,10 +294,10 @@ a {
     overflow:hidden;
     width: 100%;
 }
-.top-offset {
-    margin-top: 0;
-}
 
+.side-top-offset {
+    margin: 0;
+}
 
 
 @media only screen and (min-width: 1250px) {
@@ -327,8 +327,8 @@ a {
     .full-background-image {
         height: 350px;
     }
-    .top-offset {
-        margin-top: 15px;
+    .side-top-offset {
+        margin: 30px 15px 0 15px;
     }
 }
 @media only screen and (min-width: 650px) {
@@ -373,7 +373,6 @@ a {
     .fixed-height-img-wrapper {
         max-height:400px;
     }
-
 
 }
 

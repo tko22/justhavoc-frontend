@@ -5,11 +5,11 @@ import ErrorPage from "../error_page"
 class BrandPage extends Component {
     constructor(props) {
         super(props);
-        this.temparry = ['brand1','brand2','brand5'];
+
+        this.temparry = ['brand-1','brand-2','brand-5']; //array to check whether brand exists in database
     }
     checkBrand() {
 
-        console.log(this.temparry.indexOf(this.props.match.params.brand));
         if(this.temparry.indexOf(this.props.match.params.brand.toLowerCase()) >= 0){
             return  <h1>{this.props.match.params.brand}</h1>;
         }
